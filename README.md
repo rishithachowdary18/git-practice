@@ -1,2 +1,3 @@
-this change was made by hithub# git-practice
+b# git-practice
 Day 3 GitHub Practice
+This change was made on GitHub
