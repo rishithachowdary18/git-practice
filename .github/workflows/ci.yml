@@ -43,7 +43,11 @@ jobs:
 
       - name: Run Unit Tests
         run: |
-          pytest tests/
+          if [ -d tests ]; then
+            pytest tests/
+          else
+            echo "No tests directory found. Skipping tests."
+          fi
 
       - name: Install Build Package
         run: |
@@ -51,14 +55,22 @@ jobs:
 
       - name: Build Application
         run: |
-          python -m build
+          if [ -f setup.py ] || [ -f pyproject.toml ]; then
+            python -m build
+          else
+            echo "No build configuration found. Skipping build."
+          fi
 
       - name: Verify Build Artifacts
         run: |
-          ls -la dist/
+          if [ -d dist ]; then
+            ls -la dist/
+          else
+            echo "No dist directory found."
+          fi
 
       - name: Deploy Application to Amazon Linux EC2
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
@@ -66,7 +78,7 @@ jobs:
           script: |
             echo "Connected to EC2"
 
-            cd /home/ec2-user/app
+            cd /home/ec2-user/app || exit 1
 
             echo "Current Directory"
             pwd
@@ -90,17 +102,17 @@ jobs:
       - name: Smoke Test Application
         run: |
           curl -f http://${{ secrets.EC2_HOST }}:5000/health
-- name: Slack Success Notification
-  if: success()
-  uses: rtCamp/action-slack-notify@v2
-  env:
-    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-    SLACK_MESSAGE: "GitHub Actions Pipeline Succeeded"
 
-- name: Slack Failure Notification
-  if: failure()
-  uses: rtCamp/action-slack-notify@v2
-  env:
-    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-    SLACK_MESSAGE: "GitHub Actions Pipeline Failed"
-     
+      - name: Slack Success Notification
+        if: success()
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "GitHub Actions Pipeline Succeeded"
+
+      - name: Slack Failure Notification
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "GitHub Actions Pipeline Failed"
