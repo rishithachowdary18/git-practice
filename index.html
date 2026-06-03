@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ajay Sirivaram — Full Stack & AI Engineer. Building production-ready systems with Django, React, and AI workflows." />
+    <title>Ajay Sirivaram — Full Stack & AI Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ═══════════════════════════════════════════
+         NAV
+    ═══════════════════════════════════════════ -->
+    <nav id="navbar">
+      <div class="nav-left">
+        <a href="#home" class="nav-logo">Ajay Sirivaram</a>
+      </div>
+      <div class="nav-center">
+        <div class="main-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#stack">Stack</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="./Assets/ajay-resume.pdf" target="_blank" rel="noopener" class="btn-resume">
+          <i class="ri-download-line"></i> Resume
+        </a>
+      </div>
+      <!-- Hamburger (mobile) -->
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&#x2715;</button>
+      <a href="#home"     class="mobile-link">Home</a>
+      <a href="#about"    class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#stack"    class="mobile-link">Stack</a>
+      <a href="#contact"  class="mobile-link">Contact</a>
+      <a href="./Assets/ajay-resume.pdf" target="_blank" rel="noopener" class="mobile-link mobile-resume">Resume ↗</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 1 — HERO
+    ═══════════════════════════════════════════ -->
+    <section class="section1" id="home">
+
+      <!-- Portrait — centered, full height, behind everything -->
+      <img
+        class="hero-portrait"
+        src="./Assets/hero-bg.png"
+        alt="Ajay Sirivaram"
+        loading="eager"
+      />
+
+      <!-- Gradient overlay for readability -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Three-column layout: left | center | right -->
+      <div class="hero-layout">
+
+        <!-- LEFT — tagline -->
+        <div class="hero-left">
+          <p class="hero-tagline-left">AI + Prompt Engineer®</p>
+          <p class="hero-sub-left">
+            Building scalable production<br />
+            systems using Django, React,<br />
+            mobile &amp; AI-driven workflows.
+          </p>
+        </div>
+
+        <!-- CENTER — large name overlaid on portrait -->
+        <div class="hero-center">
+          <h1 class="hero-name">Ajay</h1>
+        </div>
+
+        <!-- RIGHT — skills list -->
+        <div class="hero-right">
+          <ul class="hero-skills">
+            <li>Fullstack Systems</li>
+            <li>Mobile Applications</li>
+            <li>AI Workflows</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll-hint" aria-hidden="true"><span></span></div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 2 — ABOUT / PROFILE
+    ═══════════════════════════════════════════ -->
+    <section class="section2" id="about">
+      <div class="about-inner">
+        <p class="section-label">Profile</p>
+        <h2 class="about-headline">
+          I write clean backend code,<br />
+          ship production apps,<br />
+          and architect AI systems.
+        </h2>
+        <div class="about-cols">
+          <p>
+            Python engineer with hands-on production experience at BlackRoth,
+            building enterprise HRMS and REST API systems. Comfortable from
+            database schema design to frontend integration. Agile-trained,
+            client-focused, debugging-obsessed.
+          </p>
+          <p>
+            Anthropic-certified across five programmes — from Claude
+            fundamentals to agentic AI systems. Based in Hyderabad, available
+            remotely worldwide for full-time roles, freelance, and
+            collaborations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3 — EXPERTISE
+    ═══════════════════════════════════════════ -->
+    <section class="section3">
+      <div class="expertise-top">
+        <p class="section-label">Expertise</p>
+        <h2>Systems that scale.</h2>
+        <span class="year-badge">2026®</span>
+      </div>
+      <div class="expertise-images">
+        <div class="mid-one"></div>
+        <div class="mid-two"></div>
+      </div>
+      <div class="expertise-copy">
+        <p>
+          Every system I build is designed for production from day one —
+          clean architecture, typed APIs, and CI/CD pipelines that ship without drama.
+        </p>
+        <p>
+          From Django REST to React Native, I connect every layer of the stack.
+          AI workflows are not add-ons — they are the foundation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MARQUEE
+    ═══════════════════════════════════════════ -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <h2 class="marquee-text">
+        Product Engineer ® AI Systems &nbsp;&nbsp; Product Engineer ® AI Systems &nbsp;&nbsp;
+        Product Engineer ® AI Systems &nbsp;&nbsp; Product Engineer ® AI Systems
+      </h2>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 4 — CORE STRENGTHS
+    ═══════════════════════════════════════════ -->
+    <section class="section4">
+      <div class="strengths-inner">
+        <h2 id="str-backend">Backend</h2>
+        <h2 id="str-fullstack">Fullstack</h2>
+        <h2 id="str-ai">AI / LLM</h2>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 5 — FEATURED WORKS (GSAP card stack)
+    ═══════════════════════════════════════════ -->
+    <div class="works-spacer" id="projects"></div>
+    <div class="works-stage">
+      <p class="works-label">Featured Works</p>
+
+      <article class="card card1">
+        <h3 class="card-title">BlackRoth</h3>
+        <div class="card-footer">
+          <p>Enterprise Platform</p>
+          <p>Node.js · React · MongoDB</p>
+        </div>
+      </article>
+
+      <article class="card card2">
+        <h3 class="card-title">Lipru</h3>
+        <div class="card-footer">
+          <p>AI Workflow Platform</p>
+          <p>Python · Claude API · FastAPI</p>
+        </div>
+      </article>
+
+      <article class="card card3">
+        <h3 class="card-title">RothDesk</h3>
+        <div class="card-footer">
+          <p>Enterprise HRMS</p>
+          <p>Django · REST · PostgreSQL</p>
+        </div>
+      </article>
+
+      <article class="card card4">
+        <h3 class="card-title">Tenant</h3>
+        <div class="card-footer">
+          <p>Rental Platform</p>
+          <p>React Native · Django · Firebase</p>
+        </div>
+      </article>
+
+      <article class="card card5">
+        <h3 class="card-title">Beverages</h3>
+        <div class="card-footer">
+          <p>Brand Website</p>
+          <p>React · Tailwind</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 5b — PROJECT GRID (recruiter-friendly)
+    ═══════════════════════════════════════════ -->
+    <section class="projects-grid-section">
+
+      <!-- GROUP 1: Production Systems -->
+      <div class="projects-group">
+        <div class="projects-group-header">
+          <span class="group-badge group-badge--live">
+            <i class="ri-radio-button-line"></i> Live in Production
+          </span>
+          <h2 class="section-title">Production Systems</h2>
+          <p class="section-sub">Shipped, running, and serving real users.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- BlackRoth Platform — TEAM LEAD card -->
+          <div class="project-card project-card--featured">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="ri-building-4-line"></i></div>
+              <div class="project-links">
+                <a href="https://blackroth.in/" target="_blank" rel="noopener" class="proj-btn proj-btn--live">
+                  <i class="ri-external-link-line"></i> Live Site
+                </a>
+              </div>
+            </div>
+
+            <div class="project-lead-badge">
+              <i class="ri-shield-star-line"></i> Team Lead
+            </div>
+
+            <h3>BlackRoth Platform</h3>
+            <p>Full-stack enterprise platform powering BlackRoth's operations — careers portal, admin dashboard, HR dashboard, and content management system.</p>
+
+            <div class="project-role-box">
+              <p class="project-role-title"><i class="ri-user-star-line"></i> Role &amp; Contribution</p>
+              <ul class="project-role-list">
+                <li><i class="ri-checkbox-circle-line"></i> Led sprint planning &amp; Jira story creation</li>
+                <li><i class="ri-checkbox-circle-line"></i> Guided team on careers page &amp; admin dashboard</li>
+                <li><i class="ri-checkbox-circle-line"></i> Architected HR &amp; content management dashboards</li>
+                <li><i class="ri-checkbox-circle-line"></i> Mentored developers on REST API integration</li>
+              </ul>
+            </div>
+
+            <div class="project-tags">
+              <span>Node.js</span><span>MongoDB</span><span>React</span>
+              <span>Tailwind</span><span>REST APIs</span><span>Jira</span>
+            </div>
+          </div>
+
+          <!-- Lipru -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="ri-layout-line"></i></div>
+              <div class="project-links">
+                <a href="https://lipru.com/" target="_blank" rel="noopener" class="proj-btn proj-btn--live">
+                  <i class="ri-external-link-line"></i> Live Site
+                </a>
+              </div>
+            </div>
+            <div class="project-role-inline">
+              <i class="ri-user-line"></i> Frontend Developer
+            </div>
+            <h3>Lipru</h3>
+            <p>Frontend interface for an AI workflow platform. Built clean, responsive UI for complex automation workflows including prompt chaining and AI-driven interactions.</p>
+            <div class="project-tags">
+              <span>React</span><span>Tailwind CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+
+          <!-- BlackRoth Beverages -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="ri-cup-line"></i></div>
+              <div class="project-links">
+                <a href="https://blackrothbeverages.com/" target="_blank" rel="noopener" class="proj-btn proj-btn--live">
+                  <i class="ri-external-link-line"></i> Live Site
+                </a>
+              </div>
+            </div>
+            <div class="project-role-inline">
+              <i class="ri-user-star-line"></i> Product Owner + Frontend Developer
+            </div>
+            <h3>BlackRoth Beverages</h3>
+            <p>Production brand website for BlackRoth Beverages. Led product direction and handled frontend implementation, working closely with stakeholders to deliver a clean, responsive, and user-focused experience.</p>
+            <div class="project-tags">
+              <span>React</span><span>Tailwind CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+
+          <!-- BlackRoth Portfolio -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="ri-global-line"></i></div>
+              <div class="project-links">
+                <a href="https://main.dg6gq0suatkji.amplifyapp.com/" target="_blank" rel="noopener" class="proj-btn proj-btn--live">
+                  <i class="ri-external-link-line"></i> Live Site
+                </a>
+              </div>
+            </div>
+            <div class="project-role-inline">
+              <i class="ri-user-line"></i> Frontend Developer (Solo Project)
+            </div>
+            <h3>BlackRoth Portfolio</h3>
+            <p>Designed and developed the official BlackRoth portfolio website independently. Delivered a modern, responsive UI with clean design, smooth navigation, and strong visual branding for a professional company presence.</p>
+            <div class="project-tags">
+              <span>React</span><span>Tailwind CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 2: Development Projects -->
+      <div class="projects-group">
+        <div class="projects-group-header">
+          <span class="group-badge group-badge--dev">
+            <i class="ri-github-line"></i> Open Source
+          </span>
+          <h2 class="section-title">Development Projects</h2>
+          <p class="section-sub">Engineering-focused builds available on GitHub.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- RothDesk -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="ri-building-2-line"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/Ajaysirivaram/Rdesk" target="_blank" rel="noopener" class="proj-btn proj-btn--github">
+                  <i class="ri-github-line"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <h3>RothDesk (Rdesk)</h3>
+            <p>Enterprise HRMS with a full REST API backend. Handles employee records, payroll processing, attendance tracking, and role-based access control.</p>
+            <div class="project-tags">
+              <span>Django</span><span>PostgreSQL</span><span>REST API</span><span>Celery</span>
+            </div>
+          </div>
+
+          <!-- Tenant -->
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="ri-key-2-line"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/workfam-1/Tenant" target="_blank" rel="noopener" class="proj-btn proj-btn--github">
+                  <i class="ri-github-line"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <h3>Tenant</h3>
+            <p>Rental management platform connecting landlords and tenants. Real-time notifications, document uploads, and payment tracking across mobile and web.</p>
+            <div class="project-tags">
+              <span>React Native</span><span>Django</span><span>Firebase</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 6 — CERTIFICATIONS
+    ═══════════════════════════════════════════ -->
+    <section class="section6">
+      <p class="section-label">Credentials</p>
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="ri-robot-2-line"></i></div>
+          <p>Claude &amp; Prompt Engineering — Anthropic certified across five programmes including agentic AI systems and advanced prompt design.</p>
+          <span class="cert-issuer">Anthropic · 2025</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="ri-code-s-slash-line"></i></div>
+          <p>Full-Stack Web Development — Hands-on production experience building enterprise REST APIs, HRMS platforms, and client-facing dashboards.</p>
+          <span class="cert-issuer">BlackRoth · 2024</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="ri-smartphone-line"></i></div>
+          <p>Mobile Application Development — React Native and cross-platform mobile apps shipped to production with real user bases.</p>
+          <span class="cert-issuer">Production · 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 7 — TECH STACK
+    ═══════════════════════════════════════════ -->
+    <section class="section7" id="stack">
+      <p class="section-label">Tools</p>
+      <h2 class="section-title">Tech Stack</h2>
+      <p class="section-sub">Every tool chosen for production, not portfolios.</p>
+      <div class="stack-grid">
+        <div class="stack-card stack-backend">
+          <p class="stack-category">Backend &amp; AI</p>
+          <h3 class="stack-heading">Core</h3>
+          <p class="stack-desc">The engine behind every product I ship.</p>
+          <ul class="stack-list">
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Python · Django · FastAPI</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>PostgreSQL · Redis · Celery</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>REST APIs · GraphQL</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Claude API · OpenAI · LangChain</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Prompt Engineering · RAG pipelines</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Agentic AI workflows</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>AWS · Docker · CI/CD</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Git · Agile · TDD</li>
+          </ul>
+        </div>
+        <div class="stack-card stack-frontend">
+          <p class="stack-category">Frontend &amp; Mobile</p>
+          <h3 class="stack-heading">Interface</h3>
+          <p class="stack-desc">From pixel to production — every layer of the stack.</p>
+          <ul class="stack-list">
+            <li><i class="ri-checkbox-blank-circle-fill"></i>React · Next.js · TypeScript</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>React Native · Expo</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Tailwind CSS · GSAP</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>REST integration · WebSockets</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>State management · Zustand</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>App Store · Play Store deployment</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Figma to code</li>
+            <li><i class="ri-checkbox-blank-circle-fill"></i>Performance optimisation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 8 — WHY WORK WITH ME
+    ═══════════════════════════════════════════ -->
+    <section class="section8">
+      <p class="section-label">Value</p>
+      <h2 class="section-title">Why Work With Me</h2>
+      <div class="why-grid">
+        <div class="why-card why-main">
+          <h3>Why me?</h3>
+          <p>
+            I don't just write code — I architect systems. Every project I take
+            on is treated as a production product: clean APIs, scalable
+            databases, and AI workflows that actually work in the real world.
+          </p>
+          <p class="why-bold">
+            From backend architecture to AI integration to mobile deployment —
+            I own the full stack. You get one engineer who thinks like a
+            product team.
+          </p>
+        </div>
+        <div class="why-card why-output">
+          <h3>Output</h3>
+          <div class="output-img"></div>
+          <div class="output-bottom">
+            <div class="peop peop1"></div>
+            <div class="peop peop2"></div>
+            <div class="peop peop3"></div>
+            <p>6+ Production Apps</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 9 — CONTACT / FOOTER
+    ═══════════════════════════════════════════ -->
+    <section class="section9" id="contact">
+      <div class="contact-hero">
+        <video class="contact-video" autoplay muted loop playsinline preload="none">
+          <source src="./Assets/contact-bg.mp4" type="video/mp4" />
+        </video>
+        <div class="contact-overlay"></div>
+        <div class="contact-content">
+          <h2>Let's Build</h2>
+          <p>Open to full-time roles, freelance, and collaborations.</p>
+          <a href="mailto:sirivaramajay1@gmail.com" class="btn-primary btn-large">
+            Start a Conversation
+          </a>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <div class="footer-brand">Ajax.Dev</div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/ajay-sirivaram-blackroth" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Ajaysirivaram" target="_blank" rel="noopener">GitHub</a>
+          <a href="./Assets/ajay-resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/ajay-sirivaram-blackroth" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-btn"><i class="ri-linkedin-box-line"></i></a>
+          <a href="https://github.com/Ajaysirivaram" target="_blank" rel="noopener" aria-label="GitHub" class="icon-btn"><i class="ri-github-line"></i></a>
+          <a href="mailto:sirivaramajay1@gmail.com" aria-label="Email" class="icon-btn"><i class="ri-mail-line"></i></a>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
