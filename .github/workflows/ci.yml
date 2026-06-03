@@ -90,17 +90,17 @@ jobs:
       - name: Smoke Test Application
         run: |
           curl -f http://${{ secrets.EC2_HOST }}:5000/health
+- name: Slack Success Notification
+  if: success()
+  uses: rtCamp/action-slack-notify@v2
+  env:
+    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    SLACK_MESSAGE: "GitHub Actions Pipeline Succeeded"
 
-      - name: Slack Notification Success
-        if: success()
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "GitHub Actions Pipeline Completed Successfully"
-
-      - name: Slack Notification Failure
-        if: failure()
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "GitHub Actions Pipeline Failed"
+- name: Slack Failure Notification
+  if: failure()
+  uses: rtCamp/action-slack-notify@v2
+  env:
+    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    SLACK_MESSAGE: "GitHub Actions Pipeline Failed"
+     
